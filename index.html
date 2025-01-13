@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!-- saved from url=(0091)https://cdpn.io/cpe/boomboom/index.html?key=index.html-0c6e7c50-84be-d957-7483-16a0d7a2886d -->
+<html lang="en" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <title>CodePen Demo</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/shivraj214/pen/mybdjgw">
+
+  
+  
+
+  
+
+  
+<script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.download"></script>
+<script src="./iframeConsoleRunner-6d8bf8b4b479137260842506acbb12717dace0823c023e08b96360e60b0840d9.js.download"></script>
+<script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.download"></script>
+<script src="./iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js.download"></script>
+<style id="INLINE_PEN_STYLESHEET_ID">/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #444;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header .logo p {
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+.hero {
+    background-image: url("C:\Users\shshi\Pictures\WhatsApp Image 2024-11-27 at 22.13.10_686afec8.jpg"); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    color: black;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 15px 40px;
+    background-color: #f39c12;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #e67e22;
+}
+
+.services {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-card {
+    background-color: navywhite;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.about {
+    background-color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact {
+    background-color: #f39c12;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact button {
+    padding: 12px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact button:hover {
+    background-color: #444;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 80%;
+    }
+
+    .cta-button {
+        padding: 10px 30px;
+    }
+}
+</style></head>
+
+<body>
+  
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Innovative Gym &amp; Healthcare Fitness</title>
+    <link rel="stylesheet" href="./style.css">
+
+
+
+    <header>
+        <div class="logo">
+            <h1>Gym &amp; Fitness</h1>
+            <p>Your Health, Our Priority</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://cdpn.io/cpe/boomboom/index.html?key=index.html-0c6e7c50-84be-d957-7483-16a0d7a2886d#home">Home</a></li>
+                <li><a href="https://cdpn.io/cpe/boomboom/index.html?key=index.html-0c6e7c50-84be-d957-7483-16a0d7a2886d#services">Services</a></li>
+                <li><a href="https://cdpn.io/cpe/boomboom/index.html?key=index.html-0c6e7c50-84be-d957-7483-16a0d7a2886d#about">About</a></li>
+                <li><a href="https://cdpn.io/cpe/boomboom/index.html?key=index.html-0c6e7c50-84be-d957-7483-16a0d7a2886d#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Achieve Your Fitness Goals</h2>
+            <p>Empowering you with personalized fitness plans and expert health guidance!</p>
+            <a href="C:\Users\shshi\Pictures\WhatsApp Image 2024-11-27 at 22.13.10_686afec8.jpg"class="cta-button">Join Us Today</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <img src="C:\Users\shshi\Pictures\R.png" alt="Personal Training">
+                <h3>Personal Training</h3>
+                <p>One-on-one personalized training sessions with certified professionals.</p>
+            </div>
+            <div class="service-card">
+                <img src="C:\Users\shshi\Pictures\sports_nutrition_2.jpg" alt="Nutrition Counseling">
+                <h3>Nutrition Counseling</h3>
+                <p>Tailored meal plans to complement your fitness journey and goals.</p>
+            </div>
+            <div class="service-card">
+                <img src="C:\Users\shshi\Pictures\HD-wallpaper-bodybuilding-barbell-biceps-exercises-fitness-gym.jpg" alt="Wellness Programs">
+                <h3>Wellness Programs</h3>
+                <p>Holistic approaches to mental health, stress management, and wellness.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>FitHealth combines fitness with wellness to help you lead a balanced life. Our mission is to provide personalized health plans that encompass fitness, nutrition, and mental wellness to achieve holistic health.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required="">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required="">
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required=""></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 FitHealth. All rights reserved.</p>
+    </footer>
+
+
+
+
+  
+  
+
+
+</body></html>
